@@ -64,6 +64,12 @@ int BeeChatApp::Run()
 
     if(messageFactory->checkMessage()) {
         std::string message_str = messageFactory->getMessage();
+
+        struct Message message;
+        message.messageType = CHAT_MESSAGE;
+        // message.messageData[ii] = message_char[ii];
+        strcpy(message.messageData, message_str.c_str());
+        client->PassMessage(&message);
     }
     
     // client is only going to tell us about chat messages,
