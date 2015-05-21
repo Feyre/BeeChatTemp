@@ -28,7 +28,7 @@ using std::queue;
 class GUI
 {
 public:
-	GUI(UserL *user, vector<UserL> *users, vector<string> *chatlog, WINDOW **info, WINDOW **chat, WINDOW **message, WINDOW **users);
+	GUI(UserL *user, vector<UserL> *users, vector<string> *chatlog, WINDOW **info, WINDOW **chat, WINDOW **message, WINDOW **users_scr);
 	GUI();
 	~GUI();
 
