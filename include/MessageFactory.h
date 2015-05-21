@@ -13,6 +13,7 @@
 #include "Windows.h"
 #include <sstream>
 #include <iostream>
+#include <stdlib.h>
 
 #define OUT 0
 #define IN 	1
