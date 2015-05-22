@@ -51,7 +51,7 @@ public:
 
 	void dummyText();
 
-private:
+// private:
 	GUI _Gooey;
 	Windows _Win;
 
