@@ -87,6 +87,3 @@ void ClientChatConnection::SendMessageToServer( struct Message* message )
 	memcpy( (void*)&clientMessage.message, (void*)message, MESSAGE_SIZE );
 	udpClient->SendToServer( clientMessage.message );
 }
-
-
-  

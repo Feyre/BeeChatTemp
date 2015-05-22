@@ -67,8 +67,10 @@ int BeeChatApp::Run()
 
         struct Message message;
         message.messageType = CHAT_MESSAGE;
-        // message.messageData[ii] = message_char[ii];
-        strcpy(message.messageData, message_str.c_str());
+        struct ChatMessage* chatMessage = (ChatMessage*) message.messageData; 
+        // strcpy(message.messageData, message_str.c_str());
+        memcpy( (void*)message.messageData, (void*)message_str.c_str(), message_str.length() );
+        
         mvwprintw(messageFactory->message_win,0,0,message_str.c_str());
         wrefresh(messageFactory->message_win);
         client->PassMessage(&message);
